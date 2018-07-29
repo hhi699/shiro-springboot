@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        .login-container{
+            padding:100px 0 0 0;
+        }
+        .form-container{
+            margin:0 auto;
+            width:500px;
+            border: 1px solid #000;
+            background-color: azure;
+        }
+        .login-form{
+            padding: 50px;
+            text-align: center;
+            vertical-align: middle;
+            height: 180px;
+        }
+        .login-form>div{
+            padding: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="form-container">
+            <form class="login-form" method="post" action="/dologin">
+                <div>
+                    <label>用户名：</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <label>密码：</label>
+                    <input type="password" name="password">
+                </div>
+                <div>
+                    <button onclick="doSubmit()">登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+    <script>
+        function doSubmit(){
+            document.getElementsByTagName("form").submit();
+        }
+    </script>
+</html>
